@@ -1,7 +1,7 @@
 # EvadeGameDesktop
 
-A Desktop Implementation of a small, original 2d game.
+Highly experimental image processing experiment.
+Allows, among other experimental features, to control the mouse using a colored pencil(object).
 
-It features a rather simple minded AI, you can play against.
-
-To compile it will require the "util.animation" package from another repository called "AnimationEngine"
+USES https://github.com/sarxos/webcam-capture, to read the image from your webcam.
+    The libraries are not included, so get them from "sarxos" him-/herself.
