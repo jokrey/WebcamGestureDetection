@@ -1,4 +1,4 @@
-# EvadeGameDesktop
+# WebcamGestureDetection
 
 Highly experimental image processing experiment.
 Allows, among other experimental features, to control the mouse using a colored pencil(object).
