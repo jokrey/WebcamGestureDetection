@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import ui.WebcamPanel;
+import util.UTIL;
 
 public class ColorTrackingPointFinder extends TrackingPointFinder {
 	public ColorTrackingPointFinder(Color currentTrackingColor_g) {
@@ -91,19 +92,29 @@ public class ColorTrackingPointFinder extends TrackingPointFinder {
 	@Override public void drawFindings(Graphics2D g, WebcamPanel camP) {
 		if(!colorMatches.isEmpty()) {
 			g.setColor(Color.white);
-			int diameter = 6;
-			for(Point match:colorMatches) {
-				Point drawP = camP.getDrawPointForPOnImg(match);
-				g.fillOval(drawP.x-diameter/2, drawP.y-diameter/2, diameter, diameter);
-			}
+			int diameter = 10;
+			if(colorMatches.size() > 10) {
+                for (int i = 0; i < 10; i++) {
+                    Point match = colorMatches.get(i + UTIL.getRandomNr(0, colorMatches.size()-i));
+                    Point drawP = camP.getDrawPointForPOnImg(match);
+                    g.fillOval(drawP.x - diameter / 2, drawP.y - diameter / 2, diameter, diameter);
+                }
+            } else {
+                for (int i = 0; i < colorMatches.size(); i++) {
+                    Point match = colorMatches.get(i);
+                    Point drawP = camP.getDrawPointForPOnImg(match);
+                    g.fillOval(drawP.x - diameter / 2, drawP.y - diameter / 2, diameter, diameter);
+                }
+            }
 		}
 		g.setColor(Color.cyan);
 		if(!trackingPoints.isEmpty()) {
-			int trackingPointDiameter = 20;
-			for(Point match:trackingPoints) {
-				Point drawP = camP.getDrawPointForPOnImg(match);
-				g.fillOval(drawP.x-trackingPointDiameter/2, drawP.y-trackingPointDiameter/2, trackingPointDiameter, trackingPointDiameter);
-			}
+			int trackingPointDiameter = 22;
+			for(int i=0;i<trackingPoints.size();i++) {
+                Point match = trackingPoints.get(i);
+                Point drawP = camP.getDrawPointForPOnImg(match);
+                g.fillOval(drawP.x - trackingPointDiameter / 2, drawP.y - trackingPointDiameter / 2, trackingPointDiameter, trackingPointDiameter);
+            }
 		}
 	}
 }

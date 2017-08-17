@@ -6,7 +6,6 @@ import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.KeyEventDispatcher;
 import java.awt.KeyboardFocusManager;
-import java.awt.Point;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.awt.event.KeyEvent;
@@ -18,10 +17,7 @@ import java.awt.image.BufferedImage;
 import javax.swing.JPanel;
 import gesture_interpreter.GestureInterpreter;
 import gesture_interpreter.Mouse_Controller_LocationBased;
-import gesture_interpreter.Mouse_Controller_MovementBased;
-import gesture_interpreter.MultiTrackingInterpreter;
 import tracking.ColorTrackingPointFinder;
-import tracking.MultiColorTracker;
 import tracking.TrackingPointFinder;
 import util.swing.SWING_UTIL;
 import util.swing.nicer.NicerFrame;
@@ -32,12 +28,12 @@ public class DisplayFrame extends NicerFrame {
 //	GestureInterpreter gest_inter = GestureInterpreter.getEmptyOne();
 //	GestureInterpreter gest_inter = new ActionDetection();
 //	GestureInterpreter gest_inter = new PathDrawer();
-	GestureInterpreter gest_inter = new Mouse_Controller_MovementBased(false, true);
-//	GestureInterpreter gest_inter= new Mouse_Controller_LocationBased();
+//	GestureInterpreter gest_inter = new Mouse_Controller_MovementBased(false, true);
+	GestureInterpreter gest_inter= new Mouse_Controller_LocationBased();
 //	GestureInterpreter gest_inter = new MultiTrackingInterpreter();
 
 //		TrackingPointFinder trackPsFinder = new MultiColorTracker();
-		TrackingPointFinder trackPsFinder = new ColorTrackingPointFinder(Color.cyan);
+		TrackingPointFinder trackPsFinder = new ColorTrackingPointFinder(Color.red);
 //		TrackingPointFinder trackPsFinder = new ShapeTrackingPointsFinder();
 
 		new DisplayFrame(trackPsFinder, gest_inter, true);
