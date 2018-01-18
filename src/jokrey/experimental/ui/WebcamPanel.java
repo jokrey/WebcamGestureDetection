@@ -1,4 +1,4 @@
-package ui;
+package jokrey.experimental.ui;
 
 import java.awt.AlphaComposite;
 import java.awt.Color;

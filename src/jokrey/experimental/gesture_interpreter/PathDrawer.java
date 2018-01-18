@@ -1,12 +1,12 @@
-package gesture_interpreter;
+package jokrey.experimental.gesture_interpreter;
 
 import java.awt.BasicStroke;
 import java.awt.Graphics2D;
 import java.awt.Point;
 import java.util.ArrayList;
 
-import tracking.TrackingPointFinder;
-import ui.WebcamPanel;
+import jokrey.experimental.tracking.TrackingPointFinder;
+import jokrey.experimental.ui.WebcamPanel;
 
 public class PathDrawer extends GestureInterpreter {
 	@Override public String getName(){return "PathDrawer";}

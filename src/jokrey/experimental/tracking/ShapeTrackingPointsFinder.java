@@ -1,4 +1,4 @@
-package tracking;
+package jokrey.experimental.tracking;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import ui.WebcamPanel;
+import jokrey.experimental.ui.WebcamPanel;
 import util.UTIL;
 
 public class ShapeTrackingPointsFinder extends TrackingPointFinder {

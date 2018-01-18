@@ -1,4 +1,4 @@
-package ui;
+package jokrey.experimental.ui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -15,10 +15,10 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.image.BufferedImage;
 import javax.swing.JPanel;
-import gesture_interpreter.GestureInterpreter;
-import gesture_interpreter.Mouse_Controller_LocationBased;
-import tracking.ColorTrackingPointFinder;
-import tracking.TrackingPointFinder;
+import jokrey.experimental.gesture_interpreter.GestureInterpreter;
+import jokrey.experimental.gesture_interpreter.Mouse_Controller_LocationBased;
+import jokrey.experimental.tracking.ColorTrackingPointFinder;
+import jokrey.experimental.tracking.TrackingPointFinder;
 import util.swing.SWING_UTIL;
 import util.swing.nicer.NicerFrame;
 

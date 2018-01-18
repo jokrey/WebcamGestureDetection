@@ -1,4 +1,4 @@
-package gesture_interpreter;
+package jokrey.experimental.gesture_interpreter;
 
 import java.awt.AWTException;
 import java.awt.Dimension;
@@ -8,8 +8,8 @@ import java.awt.Point;
 import java.awt.Robot;
 import java.awt.Toolkit;
 
-import tracking.TrackingPointFinder;
-import ui.WebcamPanel;
+import jokrey.experimental.tracking.TrackingPointFinder;
+import jokrey.experimental.ui.WebcamPanel;
 
 public class Mouse_Controller_MovementBased extends GestureInterpreter {
 	@Override public String getName(){return "Mouse_Controller_MovementBased";}

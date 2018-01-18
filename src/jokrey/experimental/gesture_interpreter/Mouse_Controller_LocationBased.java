@@ -1,4 +1,4 @@
-package gesture_interpreter;
+package jokrey.experimental.gesture_interpreter;
 
 import java.awt.AWTException;
 import java.awt.Color;
@@ -9,8 +9,8 @@ import java.awt.Rectangle;
 import java.awt.Robot;
 import java.awt.event.MouseEvent;
 
-import tracking.TrackingPointFinder;
-import ui.WebcamPanel;
+import jokrey.experimental.tracking.TrackingPointFinder;
+import jokrey.experimental.ui.WebcamPanel;
 import util.swing.SWING_UTIL;
 
 public class Mouse_Controller_LocationBased extends GestureInterpreter {

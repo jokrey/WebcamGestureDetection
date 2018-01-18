@@ -1,11 +1,11 @@
-package tracking;
+package jokrey.experimental.tracking;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.image.BufferedImage;
 
-import ui.WebcamPanel;
+import jokrey.experimental.ui.WebcamPanel;
 
 public class MultiColorTracker extends TrackingPointFinder {
 	public final ColorTrackingPointFinder[] trackers = new ColorTrackingPointFinder[3];

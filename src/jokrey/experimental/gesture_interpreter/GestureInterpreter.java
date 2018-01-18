@@ -1,10 +1,10 @@
-package gesture_interpreter;
+package jokrey.experimental.gesture_interpreter;
 
 import java.awt.Graphics2D;
 import java.awt.Point;
 
-import tracking.TrackingPointFinder;
-import ui.WebcamPanel;
+import jokrey.experimental.tracking.TrackingPointFinder;
+import jokrey.experimental.ui.WebcamPanel;
 
 public abstract class GestureInterpreter {
 	protected Point oldTrackingPoint = null;
