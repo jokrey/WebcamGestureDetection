@@ -95,7 +95,7 @@ public class ColorTrackingPointFinder extends TrackingPointFinder {
 			int diameter = 10;
 			if(colorMatches.size() > 10) {
                 for (int i = 0; i < 10; i++) {
-                    Point match = colorMatches.get(i + UTIL.getRandomNr(0, colorMatches.size()-i));
+                    Point match = colorMatches.get(i);
                     Point drawP = camP.getDrawPointForPOnImg(match);
                     g.fillOval(drawP.x - diameter / 2, drawP.y - diameter / 2, diameter, diameter);
                 }
